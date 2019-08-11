@@ -9,7 +9,10 @@ const Trainer = {
         "Content-Type": "application/json" 
       },
     }).then(res => res.json())
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+      return [];
+    });
   },
   create() {
     return fetch(`${BASE_URL}/trainers`, {

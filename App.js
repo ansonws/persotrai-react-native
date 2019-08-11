@@ -1,13 +1,29 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StatusBar, StyleSheet, View, Text } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import TrainerIndex from './src/screens/TrainerIndex';
+import Welcome from './src/screens/Welcome';
+import SignUp from './src/screens/SignUp';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+class App extends Component {
+  render() {
+    return (
+      <AppStackNavigator />
+    )
+  }
 }
+
+const AppStackNavigator = createStackNavigator({
+  Welcome: {
+    screen: Welcome,
+  },
+  SignUp: {
+    screen: SignUp,
+  },
+  TrainerIndex: {
+    screen: TrainerIndex,
+  },
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -17,3 +33,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default createAppContainer(AppStackNavigator);
