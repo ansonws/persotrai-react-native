@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import Trainer from '../requests/trainer';
 
-const SignUp = props => {
+const Profile = props => {
+
   return (
     <View style={styles.container}>
-      <Text>Sign Up Screen</Text>
-    </View>
+      <Text>My Profile</Text>
+    </View> 
   )
 }
 
@@ -18,4 +20,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignUp;
+export default Profile;  

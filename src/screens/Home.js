@@ -1,24 +1,13 @@
 import React, {Component} from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import TabNavigator from '../navigators/TabNavigator';
+import { createAppContainer } from 'react-navigation';
 
 class Home extends Component {
-
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Home Screen</Text>
-      </View>
+      <TabNavigator />
     )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-export default Home;
+export default createAppContainer(TabNavigator);

@@ -11,7 +11,7 @@ class Welcome extends Component {
       <View style={styles.container}>
         <Text>Welcome Screen</Text>
         <Button title="Sign Up" onPress={() => this.props.navigation.navigate('SignUp')} />
-        <Button title="Login" onPress={() => this.props.navigation.navigate('TrainerIndex')} />
+        <Button title="Login" onPress={() => this.props.navigation.navigate('Home')} />
       </View>
     )
   }

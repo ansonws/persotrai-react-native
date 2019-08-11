@@ -4,6 +4,8 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import TrainerIndex from './src/screens/TrainerIndex';
 import Welcome from './src/screens/Welcome';
 import SignUp from './src/screens/SignUp';
+import Home from './src/screens/Home';
+// import TabNavigator from './src/navigators/TabNavigator';
 
 class App extends Component {
   render() {
@@ -23,6 +25,12 @@ const AppStackNavigator = createStackNavigator({
   TrainerIndex: {
     screen: TrainerIndex,
   },
+  Home: {
+    screen: Home,
+  },
+  // TabNavigator: {
+  //   screen: TabNavigator,
+  // }
 });
 
 const styles = StyleSheet.create({

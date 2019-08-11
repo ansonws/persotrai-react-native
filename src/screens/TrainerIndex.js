@@ -1,9 +1,8 @@
-import React, { useState, useEffect, Component } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Trainer from '../requests/trainer';
 
 const TrainerIndex = props => {
-  // const [trainers, setTrainers] = useState([{id: 'hi', user: {first_name: "Anson", last_name: "Lam"}}]);
   const [trainers, setTrainers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -13,7 +12,7 @@ const TrainerIndex = props => {
     });
   }, []);
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Trainers</Text>
       {isLoading ? (
         <Text>Loading...</Text>

@@ -1,14 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Trainer from '../requests/trainer';
 
 const TrainerShow = props => {
 
   return (
-    <View>
-      Hi there
+    <View style={styles.container}>
+      <Text>Trainer Show Page</Text>
     </View> 
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default TrainerShow;  
