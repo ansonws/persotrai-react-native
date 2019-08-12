@@ -6,14 +6,16 @@ const Review = {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
-    }).then(res => res.json());
+    }).then(res => res.json())
+    .catch(err => console.log(err));
   },
   delete(trainer_id, review_id) {
     return fetch(`${BASE_URL}/trainers/${trainer_id}/reviews/${review_id}`, {
       method: "DELETE",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
-    }).then(res => res.json());
+    }).then(res => res.json())
+    .catch(err => console.log(err));
   },
 }
 
